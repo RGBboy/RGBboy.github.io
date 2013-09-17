@@ -343,25 +343,16 @@ body {
 .nav-item-brand,
 .nav-item-github,
 .nav-item-twitter {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
   background-color: transparent;
   border: 0;
-  overflow: hidden;
-  /* IE 6/7 fallback */
-
-  *text-indent: -9999px;
   background: url('/img/nav-matrix.png');
   height: 128px;
   display: block;
   float: left;
   margin: 0px 6px;
-}
-.nav-item-brand:before,
-.nav-item-github:before,
-.nav-item-twitter:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 150%;
 }
 .nav-item-brand:hover,
 .nav-item-github:hover,
