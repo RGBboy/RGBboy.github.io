@@ -1,0 +1,8 @@
+name: RGBboy
+paginate: 5
+paginate_path: 'page-:num'
+markdown: redcarpet
+pygments: true
+lessc: lessc
+less_input_path: './less/style.less'
+less_output_path: './css/style.css'

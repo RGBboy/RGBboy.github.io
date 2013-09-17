@@ -1,0 +1,186 @@
+@font-face {
+    font-family: 'Russian';
+    src: url('/fonts/russian-webfont.eot');
+    src: url('/fonts/russian-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/russian-webfont.woff') format('woff'),
+         url('/fonts/russian-webfont.ttf') format('truetype'),
+         url('/fonts/russian-webfont.svg#russianregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Core variables and mixins
+@import "./variables.less";
+@import "./bootstrap/mixins.less";
+
+// Reset
+@import "./bootstrap/normalize.less";
+@import "./bootstrap/print.less";
+
+// Utility classes
+@import "./bootstrap/utilities.less";
+
+html {
+  background: url("/img/background-repeat.png");
+  height: 100%;
+}
+
+body {
+  background: url("/img/container-repeat.png") center repeat-y;
+  height: 100%;
+  color:#333;
+}
+
+.wrapper {
+  background: url("/img/header-background.png") center top no-repeat;
+  height: 100%;
+}
+
+.wrapper-inner {
+  width:640px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin:0px auto -64px;
+}
+
+.push{
+  background: url("/img/container-repeat.png") repeat-y;
+  height:64px;
+}
+
+.footer{
+  width:640px;
+  margin:0px auto;
+  height:64px;
+}
+
+.content {
+  background: url("/img/container-repeat.png") repeat-y;
+  .clearfix();
+}
+
+.header {
+  height:128px;
+}
+
+.nav-item-brand,
+.nav-item-github,
+.nav-item-twitter {
+
+  .hide-text();
+
+  background:url('/img/nav-matrix.png');
+  height:128px;
+  display:block;
+  float:left;
+  margin:0px 6px;
+  &:hover {
+    background-position-y:-128px;
+  };
+}
+
+.nav-item-brand {
+  width:196px;
+  background-position:1px 0px;
+}
+
+.nav-item-github {
+  width:36px;
+  background-position:-206px 0px;
+}
+
+.nav-item-twitter {
+  width:36px;
+  background-position:-252px 0px;
+}
+
+.post {
+  background:#FFF;
+  padding:16px;
+  margin-bottom:32px;
+  -moz-box-shadow:    1px 1px 3px 0px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.16);
+  box-shadow:         1px 1px 2px 0px rgba(0, 0, 0, 0.16);
+}
+
+.post-heading {
+  font-family:@headings-font-family;
+  font-size:30px;
+  margin:0px;
+  letter-spacing: 0.03125em;
+  text-transform:lowercase;
+}
+
+.post-date {
+  font-family:@headings-font-family;
+  font-size:18px;
+  color:#CCC;
+  letter-spacing: 0.03125em;
+  text-transform:lowercase;
+}
+
+.pager {
+  margin-bottom:32px;
+  .clearfix();
+}
+
+.footer {
+  background: url("/img/container-repeat.png") repeat-y;
+  padding-bottom:16px;
+  .clearfix();
+}
+
+a {
+  text-decoration:none;
+  color:#CD3133;
+  &:hover {
+    color: darken(#CD3133, 10%);
+    text-decoration:none;
+  }
+}
+
+.post img {
+  display: block;
+  max-width: 100%; // Part 1: Set a maximum relative to the parent
+  height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
+  margin:0px auto;
+}
+
+.button {
+  background:#333;
+  color:#FFF;
+  font-family:@headings-font-family;
+  font-size:30px;
+  margin:0px;
+  letter-spacing: 0.03125em;
+  text-transform:lowercase;
+  padding:4px;
+  -moz-box-shadow:    1px 1px 3px 0px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.16);
+  box-shadow:         1px 1px 2px 0px rgba(0, 0, 0, 0.16);
+  &:hover {
+    color:#DDDDDD;
+  }
+  &.disabled {
+    color:#555555;
+    cursor: not-allowed;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  body {
+    background-position: 0px;
+    background-repeat: repeat-y;
+  }
+  
+  .wrapper {
+    background-position: -280px top;
+    background-repeat: no-repeat;
+  }
+
+  .wrapper-inner,
+  .footer {
+    width:100%;
+  }
+}
