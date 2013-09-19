@@ -4,10 +4,8 @@ title: RGBboy
 ---
 
 {% for page in paginator.posts %}
-  <div></div>
   {% assign body = page.content %}
   {% include post.html %}
-
 {% endfor %}
 
 <!-- Pagination links -->
