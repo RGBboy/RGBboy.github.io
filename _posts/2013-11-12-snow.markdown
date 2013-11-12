@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "Snow"
+date:   2013-09-15 12:00:00
+categories: singularity
+---
+
+![Snow](/img/posts/snow.jpg "Snow")
